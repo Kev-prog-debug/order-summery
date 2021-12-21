@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Red Hat Display", sans-serif;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f5f7ff;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.card {
+  width: 50%;
+  border: none;
+  border-radius: 10px;
+  height: auto;
+  background-color: #e0e8ff;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+#info {
+  text-align: center;
+}
+
+#info p {
+  font-size: 16px;
+  font-weight: 200;
+}
+
+#music-plan-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 5px 20px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: #f5f7ff;
+}
+
+#music-plan-card div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#music-plan-card div #price h4,
+#music-plan-card div #price p {
+  margin: 5px;
+}
+
+#music-plan-card img {
+  width: 40px;
+  height: 40px;
+}
+
+#proceed-order-btn {
+  display: block;
+  margin: 1.5rem auto;
+  width: 50%;
+  height: 35px;
+  font-size: 18px;
+  background-color: #3829e0;
+  color: #f5f7ff;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 5px 14px 0px rgba(56, 41, 224, 0.75);
+  -webkit-box-shadow: 2px 5px 14px 0px rgba(56, 41, 224, 0.75);
+  -moz-box-shadow: 2px 5px 14px 0px rgba(56, 41, 224, 0.75);
+}
+
+#cancel-order-btn {
+  display: block;
+  margin: 1.5rem auto;
+  width: 50%;
+  height: 35px;
+  font-size: 18px;
+  background-color: #e0e8ff;
+  color: #7280a7;
+  border: none;
+  border-radius: 5px;
+}
+
+.attribution {
+  color: #3e52a3;
+  margin: 2rem;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: #3e52a3;
+}
+
+@media (max-width: 675px) {
+  .card {
+    width: 90%;
+  }
+  #cancel-order-btn,
+  #proceed-order-btn {
+    width: 70%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

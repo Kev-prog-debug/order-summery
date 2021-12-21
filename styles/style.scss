@@ -1,0 +1,109 @@
+$attributionText: hsl(228, 45%, 44%);
+$paleBlue: hsl(225, 100%, 94%);
+$brightBlue: hsl(245, 75%, 52%);
+$veryPaleBlue: hsl(225, 100%, 98%);
+$darkHue: hsl(223, 47%, 23%);
+$desaturatedBlue: hsl(224, 23%, 55%);
+$mainFont: "Red Hat Display", sans-serif;
+$paragraphFontSize: 16px;
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@mixin btn($bgColor, $color) {
+  display: block;
+  margin: 1.5rem auto;
+  width: 50%;
+  height: 35px;
+  font-size: 18px;
+  background-color: $bgColor;
+  color: $color;
+  border: none;
+  border-radius: 5px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $mainFont;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $veryPaleBlue;
+}
+.container {
+  @include flex(center, center, row);
+}
+.card {
+  width: 50%;
+  border: none;
+  border-radius: 10px;
+  height: auto;
+  background-color: $paleBlue;
+  img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+}
+
+#info {
+  text-align: center;
+  p {
+    font-size: $paragraphFontSize;
+    font-weight: 200;
+  }
+}
+
+#music-plan-card {
+  @include flex(space-between, center, row);
+  margin: 5px 20px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: $veryPaleBlue;
+  div {
+    @include flex(space-between, center, row);
+    #price {
+      h4,
+      p {
+        margin: 5px;
+      }
+    }
+  }
+  img {
+    width: 40px;
+    height: 40px;
+  }
+}
+#proceed-order-btn {
+  @include btn($brightBlue, $veryPaleBlue);
+  box-shadow: 2px 5px 14px 0px rgba(56, 41, 224, 0.75);
+  -webkit-box-shadow: 2px 5px 14px 0px rgba(56, 41, 224, 0.75);
+  -moz-box-shadow: 2px 5px 14px 0px rgba(56, 41, 224, 0.75);
+}
+#cancel-order-btn {
+  @include btn($paleBlue, $desaturatedBlue);
+}
+.attribution {
+  color: $attributionText;
+  margin: 2rem;
+  a {
+    text-decoration: none;
+    color: $attributionText;
+  }
+}
+
+@media (max-width: 675px) {
+  .card {
+    width: 90%;
+  }
+  #cancel-order-btn,
+  #proceed-order-btn {
+    width: 70%;
+  }
+}
